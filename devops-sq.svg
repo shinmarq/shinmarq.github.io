@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4da6ff"></stop>
+      <stop offset="100%" stop-color="#82c0ff"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Infinity DevOps Shape -->
+  <path d="M178 64c-22 0-41 12-50 32-9-20-28-32-50-32C47 64 20 96 20 128s27 64 58 64c22 0 41-12 50-32 9 20 28 32 50 32 31 0 58-32 58-64s-27-64-58-64zm-100 96c-19 0-34-18-34-32s15-32 34-32c21 0 34 19 34 32s-13 32-34 32zm100 0c-21 0-34-19-34-32s13-32 34-32c19 0 34 18 34 32s-15 32-34 32z" fill="url(#grad)" stroke="#4da6ff" stroke-width="3"></path>
+
+  <!-- Initials (SQ) -->
+  <text x="128" y="138" font-family="Segoe UI, sans-serif" font-size="52" fill="#ffffff" text-anchor="middle" font-weight="700" letter-spacing="2">
+    SQ
+  </text>
+</svg>
