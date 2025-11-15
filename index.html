@@ -6,34 +6,62 @@
     <title>Shin Quipit | DevOps Engineer</title>
 
     <style>
+        /* ---------- GENERAL ---------- */
         body {
             margin: 0;
             font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-            background: #f9f9f9;
-            color: #111;
+            background: #0d0d0d;
+            color: #e5e5e5;
+            line-height: 1.6;
+            animation: fadeIn 1.2s ease-in-out;
         }
 
+        a {
+            color: #4da6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- FADE IN ANIMATION ---------- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* ---------- HEADER (sticky) ---------- */
         header {
-            padding: 60px 20px;
+            position: sticky;
+            top: 0;
+            background: #111;
+            padding: 20px 0;
             text-align: center;
-            background: white;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #222;
+            z-index: 10;
         }
 
         header h1 {
-            font-size: 42px;
             margin: 0;
+            font-size: 30px;
             font-weight: 700;
+            color: #fff;
         }
 
         header p {
-            margin-top: 10px;
-            color: #555;
-            font-size: 18px;
+            margin: 5px 0 0 0;
+            color: #aaa;
+            font-size: 15px;
         }
 
+        /* ---------- CONTAINER ---------- */
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -41,13 +69,38 @@
         h2 {
             font-size: 28px;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .section {
+        /* ---------- PROFILE SECTION ---------- */
+        .profile {
+            text-align: center;
             margin-bottom: 60px;
         }
 
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #444;
+            margin-bottom: 20px;
+        }
+
+        .cv-button {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #4da6ff;
+            color: #000;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .cv-button:hover {
+            background: #1a8cff;
+        }
+
+        /* ---------- SKILLS ---------- */
         .skills-list {
             display: flex;
             flex-wrap: wrap;
@@ -56,61 +109,71 @@
 
         .skills-list span {
             padding: 8px 14px;
-            background: #ececec;
+            background: #1a1a1a;
+            border: 1px solid #333;
             border-radius: 6px;
             font-size: 14px;
         }
 
+        /* ---------- PROJECT GRID ---------- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
         .project {
-            background: white;
-            padding: 25px;
+            background: #161616;
+            padding: 20px;
             border-radius: 10px;
-            border: 1px solid #eee;
-            margin-bottom: 20px;
+            border: 1px solid #222;
+            transition: transform 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
         }
 
         .project h3 {
-            margin: 0 0 8px 0;
+            margin: 0 0 10px 0;
             font-size: 20px;
+            color: #4da6ff;
         }
 
+        /* ---------- FOOTER ---------- */
         footer {
             text-align: center;
             padding: 40px;
-            color: #777;
+            color: #666;
             font-size: 14px;
         }
 
-        a {
-            color: #0070f3;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
         <h1>Shin Quipit</h1>
-        <p>DevOps Engineer • Cloud & Kubernetes • SRE • Automation</p>
+        <p>DevOps Engineer • Cloud • Kubernetes • SRE • Automation</p>
     </header>
 
-    <div class="container">
+    <div class="container fade">
 
-        <!-- About -->
-        <div class="section">
-            <h2>About Me</h2>
+        <!-- PROFILE -->
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Photo" />
             <p>
-                DevSecOps professional with a decade of experience driving secure, automated, and scalable cloud solutions across Azure and AWS. 
-                Skilled in Kubernetes, CI/CD, and infrastructure as code, integrating security into every stage of delivery. 
-                Passionate about automation, continuous improvement, and technical leadership.
+                Senior DevOps & DevSecOps Engineer with extensive experience across Azure, AWS,
+                Kubernetes, automation, and secure infrastructure design.
+                Passionate about cloud-native architectures, GitOps, and scalable systems.
             </p>
+
+            <a class="cv-button" href="Shin_Quipit_CV.pdf" download>Download CV</a>
         </div>
 
-        <!-- Skills -->
+        <!-- SKILLS -->
         <div class="section">
             <h2>Skills</h2>
             <div class="skills-list">
@@ -119,88 +182,70 @@
                 <span>Kubernetes (AKS, EKS)</span>
                 <span>Terraform</span>
                 <span>Helm</span>
-                <span>GitHub Actions, Azure DevOps, CircleCI</span>
-                <span>Linux, Windows, macOS</span>
-                <span>Docker, Containerization</span>
-                <span>Networking, DNS, Load Balancing</span>
-                <span>Monitoring & Logging, Alerting</span>
-                <span>Security, Compliance, Governance, DevSecOps</span>
-                <span>Automation, Infrastructure as Code</span>
-                <span>Continuous Integration/Continuous Delivery (CI/CD)</span>
+                <span>Azure DevOps</span>
+                <span>GitHub Actions</span>
+                <span>Docker</span>
+                <span>Linux</span>
+                <span>DevSecOps</span>
+                <span>GitOps: ArgoCD / Flux</span>
+                <span>CI/CD Design</span>
+                <span>Networking & Security</span>
             </div>
         </div>
 
-        <!-- Projects -->
+        <!-- PROJECTS -->
         <div class="section">
-            <h2>Highlighted Projects</h2>
+            <h2>Projects</h2>
 
-            <div class="project">
-                <h3>⚙️ Legacy VM-based Deployment to Azure Kubernetes Service (AKS)</h3>
-                <p>
-                    Migrated legacy VM-based deployments into a fully automated CI/CD pipeline using 
-                    Azure DevOps Implemented artifact versioning, scanning, and 
-                    automated rollouts.
+            <div class="grid">
 
-                    Multi region deployment with Azure Firewall, Key Vault integration, and Terraform automation.
+                <div class="project">
+                    <h3>⚙️ VM → AKS Migration</h3>
+                    <p>
+                        Migrated legacy VM workloads to Azure Kubernetes Service with GitOps using ArgoCD,
+                        Terraform provisioning, automated rollbacks, and multi-region failover.
+                    </p>
+                </div>
 
-                    Automated rollback and rollback to previous version if the new deployment fails.
+                <div class="project">
+                    <h3>🔄 CI/CD Modernization</h3>
+                    <p>
+                        Designed multi-language CI/CD templates on GitHub Actions for Node.js, React, and C#
+                        with automated scanning, testing, and container deployment to AWS ECR.
+                    </p>
+                </div>
 
-                    Automated scaling of the deployment based on the traffic.
+                <div class="project">
+                    <h3>🛡 Micro-Insurance Platform</h3>
+                    <p>
+                        Built a micro-insurance platform on AWS EKS + CloudFront with Terraform,
+                        FluxCD GitOps, and infrastructure automation.
+                    </p>
+                </div>
 
-                    Argocd for deployment and management of the application.
-                </p>
+                <div class="project">
+                    <h3>🤖 Emma by AXA</h3>
+                    <p>
+                        Developed AXA PH’s AI-driven chatbot architecture.  
+                        <a href="https://www.axa.com.ph/emma" target="_blank">View Emma →</a>
+                    </p>
+                </div>
+
+                <div class="project">
+                    <h3>💬 Chatbot PH Architecture</h3>
+                    <p>
+                        Designed microservices powering chatbot systems using NodeJS, MongoDB,
+                        and NLP integrations (Wit.ai, Dialogflow, LUIS).
+                    </p>
+                </div>
+
             </div>
-
-            <div class="project">
-                <h3>🔄 CI/CD Pipeline Modernization</h3>
-                <p>
-                    Created a templated CI/CD pipeline for backend and frontend applications using GitHub Actions for nodejs, react, and C# applications.
-                    includes build, test, and deploy stages.
-
-                    It uses AWS ECR for container registry for the backend application and AWS CloudFront for the frontend application.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Infrastructure as Code for Micro insurance platform/h3>
-                <p>
-                    Built a micro insurance platform using AWS EKS for the backend and AWS CloudFront for the frontend.
-                    automated deployment using GitHub Actions and automated API documentation generation using API blueprint.
-
-                    fluxCD for deployment and management of the application.
-
-                    Terraform for infrastructure as code.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Emma by AXA - Chatbot for AXA Insurance/h3>
-                <p>
-                    AXA's chatbot for their insurance products.
-                    https://www.axa.com.ph/emma
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Microservices and architecture for Chatbot Philippines/h3>
-                <p>
-                    Microservices built with NodeJS.
-
-                    Messaging Service - Used for messaging with the users it uses Microsoft Bot Framework V1 and V2.
-                    AuthN and AuthZ Service - Used for authentication and authorization of the users such as Login, Register, Forgot Password, etc.
-                    AI Service - Used for AI processing and generation of responses it uses NLP framework such as Wit AI, Dialogflow, and MicrosoftLUIS.
-
-                    MongoDB for the database.
-                    Azure App Service for the web application.
-                </p>
-            </div>
-
         </div>
 
-        <!-- Contact -->
+        <!-- CONTACT -->
         <div class="section">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:shin@example.com">shin.quipit@gmail.com</a></p>
+            <p>Email: <a href="mailto:shin.quipit@gmail.com">shin.quipit@gmail.com</a></p>
             <p>GitHub: <a href="https://github.com/shinmarq">github.com/shinmarq</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/shinmarq/">linkedin.com/in/shinmarq</a></p>
         </div>
@@ -208,7 +253,8 @@
     </div>
 
     <footer>
-        © 2025 Shin Mar — Portfolio
+        © 2025 Shin Quipit — Portfolio
     </footer>
+
 </body>
 </html>
