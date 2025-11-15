@@ -95,7 +95,7 @@
 <body>
     <header>
         <h1>Shin Quipit</h1>
-        <p>Senior DevOps Engineer • Cloud & Kubernetes • SRE • Automation</p>
+        <p>DevOps Engineer • Cloud & Kubernetes • SRE • Automation</p>
     </header>
 
     <div class="container">
@@ -104,9 +104,9 @@
         <div class="section">
             <h2>About Me</h2>
             <p>
-                I am a Senior DevOps Engineer with experience across Azure, Kubernetes (AKS),
-                Terraform, CI/CD, automation, SRE practices, and cloud migration projects.
-                I build scalable, secure, and cost-efficient infrastructure systems for modern applications.
+                DevSecOps professional with a decade of experience driving secure, automated, and scalable cloud solutions across Azure and AWS. 
+                Skilled in Kubernetes, CI/CD, and infrastructure as code, integrating security into every stage of delivery. 
+                Passionate about automation, continuous improvement, and technical leadership.
             </p>
         </div>
 
@@ -115,15 +115,18 @@
             <h2>Skills</h2>
             <div class="skills-list">
                 <span>Azure</span>
-                <span>Kubernetes (AKS)</span>
+                <span>AWS</span>
+                <span>Kubernetes (AKS, EKS)</span>
                 <span>Terraform</span>
                 <span>Helm</span>
-                <span>GitHub Actions</span>
-                <span>Azure DevOps</span>
-                <span>Linux</span>
-                <span>Docker</span>
-                <span>Networking</span>
-                <span>Monitoring & Logging</span>
+                <span>GitHub Actions, Azure DevOps, CircleCI</span>
+                <span>Linux, Windows, macOS</span>
+                <span>Docker, Containerization</span>
+                <span>Networking, DNS, Load Balancing</span>
+                <span>Monitoring & Logging, Alerting</span>
+                <span>Security, Compliance, Governance, DevSecOps</span>
+                <span>Automation, Infrastructure as Code</span>
+                <span>Continuous Integration/Continuous Delivery (CI/CD)</span>
             </div>
         </div>
 
@@ -132,28 +135,63 @@
             <h2>Highlighted Projects</h2>
 
             <div class="project">
-                <h3>⚙️ Azure AKS Multi-Client Infrastructure</h3>
+                <h3>⚙️ Legacy VM-based Deployment to Azure Kubernetes Service (AKS)</h3>
                 <p>
-                    Designed and managed an AKS setup with namespace isolation, 
-                    network security, APISIX ingress, and autoscaling. 
-                    Includes Azure Firewall, Key Vault integration, and Terraform automation.
+                    Migrated legacy VM-based deployments into a fully automated CI/CD pipeline using 
+                    Azure DevOps Implemented artifact versioning, scanning, and 
+                    automated rollouts.
+
+                    Multi region deployment with Azure Firewall, Key Vault integration, and Terraform automation.
+
+                    Automated rollback and rollback to previous version if the new deployment fails.
+
+                    Automated scaling of the deployment based on the traffic.
+
+                    Argocd for deployment and management of the application.
                 </p>
             </div>
 
             <div class="project">
                 <h3>🔄 CI/CD Pipeline Modernization</h3>
                 <p>
-                    Migrated legacy VM-based deployments into a fully automated CI/CD pipeline using 
-                    Azure DevOps & GitHub Actions. Implemented artifact versioning, scanning, and 
-                    automated rollouts.
+                    Created a templated CI/CD pipeline for backend and frontend applications using GitHub Actions for nodejs, react, and C# applications.
+                    includes build, test, and deploy stages.
+
+                    It uses AWS ECR for container registry for the backend application and AWS CloudFront for the frontend application.
                 </p>
             </div>
 
             <div class="project">
-                <h3>☁ Cloud Migration (On-Prem → Azure)</h3>
+                <h3>Infrastructure as Code for Micro insurance platform/h3>
                 <p>
-                    Built a cloud migration roadmap and implemented secure hybrid networking, 
-                    data migration, automated provisioning, and Kubernetes-based modernization.
+                    Built a micro insurance platform using AWS EKS for the backend and AWS CloudFront for the frontend.
+                    automated deployment using GitHub Actions and automated API documentation generation using API blueprint.
+
+                    fluxCD for deployment and management of the application.
+
+                    Terraform for infrastructure as code.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Emma by AXA - Chatbot for AXA Insurance/h3>
+                <p>
+                    AXA's chatbot for their insurance products.
+                    https://www.axa.com.ph/emma
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Microservices and architecture for Chatbot Philippines/h3>
+                <p>
+                    Microservices built with NodeJS.
+
+                    Messaging Service - Used for messaging with the users it uses Microsoft Bot Framework V1 and V2.
+                    AuthN and AuthZ Service - Used for authentication and authorization of the users such as Login, Register, Forgot Password, etc.
+                    AI Service - Used for AI processing and generation of responses it uses NLP framework such as Wit AI, Dialogflow, and MicrosoftLUIS.
+
+                    MongoDB for the database.
+                    Azure App Service for the web application.
                 </p>
             </div>
 
@@ -162,9 +200,9 @@
         <!-- Contact -->
         <div class="section">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:shin@example.com">shin@example.com</a></p>
+            <p>Email: <a href="mailto:shin@example.com">shin.quipit@gmail.com</a></p>
             <p>GitHub: <a href="https://github.com/shinmarq">github.com/shinmarq</a></p>
-            <p>LinkedIn: (add your link)</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/shinmarq/">linkedin.com/in/shinmarq</a></p>
         </div>
 
     </div>
