@@ -166,6 +166,28 @@
             color: #000;
         }
 
+        .ops-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ops-list span {
+            padding: 8px 14px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 14px;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        .ops-list span:hover {
+            transform: translateY(-3px);
+            background: var(--accent);
+            color: #000;
+        }
+
+
         /* ---------- PROJECT GRID ---------- */
         .grid {
             display: grid;
@@ -248,6 +270,7 @@
         <!-- SKILLS -->
         <div class="section">
             <h2>Skills</h2>
+
             <div class="skills-list">
                 <span>Azure</span>
                 <span>AWS</span>
@@ -262,6 +285,25 @@
                 <span>GitOps: ArgoCD / Flux</span>
                 <span>CI/CD Design</span>
                 <span>Networking & Security</span>
+            </div>
+        </div>
+
+        <!-- OPERATIONS & RELIABILITY -->
+        <div class="section">
+            <h2>Operations & Reliability</h2>
+
+            <div class="ops-list">
+                <span>Disaster Recovery</span>
+                <span>Root Cause Analysis (RCA)</span>
+                <span>Incident Management</span>
+                <span>Monitoring & Alerting</span>
+                <span>Performance Optimization</span>
+                <span>Release Management</span>
+                <span>Troubleshooting</span>
+                <span>Service Reliability</span>
+                <span>Availability & Uptime</span>
+                <span>On-Call Support</span>
+                <span>Change Management</span>
             </div>
         </div>
 
