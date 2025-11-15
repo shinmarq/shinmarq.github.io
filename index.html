@@ -6,18 +6,38 @@
     <title>Shin Quipit | DevOps Engineer</title>
 
     <style>
+        :root {
+            --bg: #0d0d0d;
+            --text: #e5e5e5;
+            --card: #161616;
+            --header: #111;
+            --border: #222;
+            --accent: #4da6ff;
+        }
+
+        /* LIGHT MODE VARIABLES */
+        .light-mode {
+            --bg: #f8f8f8;
+            --text: #111;
+            --card: #ffffff;
+            --header: #ffffff;
+            --border: #ddd;
+            --accent: #0070f3;
+        }
+
         /* ---------- GENERAL ---------- */
         body {
             margin: 0;
             font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-            background: #0d0d0d;
-            color: #e5e5e5;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
             animation: fadeIn 1.2s ease-in-out;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         a {
-            color: #4da6ff;
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -39,24 +59,40 @@
         header {
             position: sticky;
             top: 0;
-            background: #111;
+            background: var(--header);
             padding: 20px 0;
             text-align: center;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid var(--border);
             z-index: 10;
+            transition: background 0.3s ease;
         }
 
         header h1 {
             margin: 0;
             font-size: 30px;
             font-weight: 700;
-            color: #fff;
+            color: var(--text);
         }
 
         header p {
             margin: 5px 0 0 0;
             color: #aaa;
             font-size: 15px;
+        }
+
+        /* ---------- TOGGLE BUTTON ---------- */
+        .toggle-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: var(--accent);
+            color: #000;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
         }
 
         /* ---------- CONTAINER ---------- */
@@ -81,7 +117,7 @@
         .cv-button {
             display: inline-block;
             padding: 12px 22px;
-            background: #4da6ff;
+            background: var(--accent);
             color: #000;
             border-radius: 6px;
             font-weight: bold;
@@ -89,7 +125,7 @@
         }
 
         .cv-button:hover {
-            background: #1a8cff;
+            opacity: 0.8;
         }
 
         /* ---------- SKILLS ---------- */
@@ -101,10 +137,19 @@
 
         .skills-list span {
             padding: 8px 14px;
-            background: #1a1a1a;
-            border: 1px solid #333;
+            background: var(--card);
+            border: 1px solid var(--border);
             border-radius: 6px;
             font-size: 14px;
+            transition: transform 0.2s ease, background 0.3s ease;
+            cursor: default;
+        }
+
+        /* Hover animation */
+        .skills-list span:hover {
+            transform: translateY(-3px);
+            background: var(--accent);
+            color: #000;
         }
 
         /* ---------- PROJECT GRID ---------- */
@@ -115,11 +160,11 @@
         }
 
         .project {
-            background: #161616;
+            background: var(--card);
             padding: 20px;
             border-radius: 10px;
-            border: 1px solid #222;
-            transition: transform 0.2s ease;
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease, background 0.3s ease;
         }
 
         .project:hover {
@@ -129,7 +174,22 @@
         .project h3 {
             margin: 0 0 10px 0;
             font-size: 20px;
-            color: #4da6ff;
+            color: var(--accent);
+        }
+
+        /* ---------- BACK TO TOP BUTTON ---------- */
+        #topBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent);
+            padding: 10px 16px;
+            border-radius: 6px;
+            color: #000;
+            cursor: pointer;
+            font-size: 14px;
+            display: none;
+            font-weight: bold;
         }
 
         /* ---------- FOOTER ---------- */
@@ -138,6 +198,11 @@
             padding: 40px;
             color: #666;
             font-size: 14px;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
         }
 
     </style>
@@ -149,6 +214,7 @@
     <header>
         <h1>Shin Quipit</h1>
         <p>DevOps Engineer • Cloud • Kubernetes • SRE • Automation</p>
+        <button class="toggle-btn" onclick="toggleMode()">Light/Dark</button>
     </header>
 
     <div class="container fade">
@@ -192,42 +258,28 @@
 
                 <div class="project">
                     <h3>⚙️ VM → AKS Migration</h3>
-                    <p>
-                        Migrated legacy VM workloads to Azure Kubernetes Service with GitOps using ArgoCD,
-                        Terraform provisioning, automated rollbacks, and multi-region failover.
-                    </p>
+                    <p>Migrated legacy workloads to AKS using ArgoCD, Terraform, multi-region DR, and automated rollbacks.</p>
                 </div>
 
                 <div class="project">
                     <h3>🔄 CI/CD Modernization</h3>
-                    <p>
-                        Designed multi-language CI/CD templates on GitHub Actions for Node.js, React, and C#
-                        with automated scanning, testing, and container deployment to AWS ECR.
-                    </p>
+                    <p>Built GitHub Actions pipelines with scanning, testing, packaging, and automated deployment to AWS ECR.</p>
                 </div>
 
                 <div class="project">
                     <h3>🛡 Micro-Insurance Platform</h3>
-                    <p>
-                        Built a micro-insurance platform on AWS EKS + CloudFront with Terraform,
-                        FluxCD GitOps, and infrastructure automation.
-                    </p>
+                    <p>Designed AWS EKS platform with CloudFront, Terraform, FluxCD GitOps, and automated documentation.</p>
                 </div>
 
                 <div class="project">
                     <h3>🤖 Emma by AXA</h3>
-                    <p>
-                        Developed AXA PH’s AI-driven chatbot architecture.  
-                        <a href="https://www.axa.com.ph/emma" target="_blank">View Emma →</a>
-                    </p>
+                    <p>Developed chatbot infrastructure for AXA PH.  
+                    <a href="https://www.axa.com.ph/emma" target="_blank">View Emma →</a></p>
                 </div>
 
                 <div class="project">
                     <h3>💬 Chatbot PH Architecture</h3>
-                    <p>
-                        Designed microservices powering chatbot systems using NodeJS, MongoDB,
-                        and NLP integrations (Wit.ai, Dialogflow, LUIS).
-                    </p>
+                    <p>Built scalable NodeJS microservices with MongoDB and NLP engines (Wit.ai, Dialogflow, LUIS).</p>
                 </div>
 
             </div>
@@ -246,6 +298,32 @@
     <footer>
         © 2025 Shin Quipit — Portfolio
     </footer>
+
+    <!-- FLOATING BACK TO TOP -->
+    <div id="topBtn" onclick="scrollToTop()">↑ Top</div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Dark Mode Toggle
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+        }
+
+        // Back to Top Button
+        let topBtn = document.getElementById("topBtn");
+
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
 
 </body>
 </html>
