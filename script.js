@@ -25,7 +25,7 @@ function loadProjects(projects) {
 }
 
 // OPEN PROJECT MODAL
-function openProject(title, description, techArray) {
+function openProject(title, description, techArray, link, linkText) {
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalDescription").innerText = description;
 
@@ -36,6 +36,15 @@ function openProject(title, description, techArray) {
         span.innerText = t;
         techContainer.appendChild(span);
     });
+
+    // Show link if available
+    const modalLink = document.getElementById("modalLink");
+    if (link) {
+        modalLink.innerHTML = `<a href="${link}" target="_blank">${linkText}</a>`;
+        modalLink.style.display = "block";
+    } else {
+        modalLink.style.display = "none";
+    }
 
     document.getElementById("projectModal").style.display = "block";
 }

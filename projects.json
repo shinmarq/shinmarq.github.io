@@ -9,7 +9,9 @@
         "title": "🤖 BPI AIA Pamilya Protect Chatbot Infrastructure (2022–2024)",
         "short": "Chatbot infrastructure for BPI AIA powered by AWS EKS.",
         "description": "Designed and maintained the BPI AIA chatbot infrastructure running on AWS EKS. Implemented secure authentication, multi-channel messaging, high availability, autoscaling, centralized logs, and container security. Included Keycloak, Secrets Manager, Redis cache optimization, RabbitMQ messaging backbone, and CI/CD via GitHub Actions.",
-        "tech": ["AWS","EKS","AWS Secrets Manager","GitHub Actions","RabbitMQ","Docker","NGINX","Keycloak","AWS RDS PostgreSQL","Elasticsearch","Redis"]
+        "tech": ["AWS","EKS","AWS Secrets Manager","GitHub Actions","RabbitMQ","Docker","NGINX","Keycloak","AWS RDS PostgreSQL","Elasticsearch","Redis"],
+        "link": "https://www.facebook.com/BPIAIAPamilyaProtect",
+        "linkText": "View BPI AIA Pamilya Protect Chatbot →"
     },
     {
         "title": "🔄 CI/CD Modernization (2020–2024)",
@@ -27,7 +29,9 @@
         "title": "🤖 Emma by AXA (2019–2020)",
         "short": "Chatbot backend/frontend + NLP for AXA Philippines.",
         "description": "Developed the backend and frontend architecture supporting AXA’s Emma chatbot platform, including NLP integration, Cosmos DB storage, Azure pipelines, identity management, and multi-channel compatibility. Modernized cloud workloads to Azure Kubernetes and serverless endpoints.",
-        "tech": ["Azure","Bot Framework","Node.js","NLP","Azure DevOps","Docker","Cosmos DB"]
+        "tech": ["Azure","Bot Framework","Node.js","NLP","Azure DevOps","Docker","Cosmos DB"],
+        "link": "https://www.axa.com.ph/emma",
+        "linkText": "View Emma →"
     },
     {
         "title": "💬 Chatbot PH Architecture (2017–2018)",
