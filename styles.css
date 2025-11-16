@@ -322,16 +322,16 @@ h2 {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: var(--accent);
     padding: 10px 16px;
+    background: var(--accent);
     border-radius: 6px;
     color: #000;
     cursor: pointer;
     font-size: 14px;
     display: none;
     font-weight: bold;
-    z-index: 99;
-    transition: 0.2s;
+    z-index: 99999;
+    transition: 0.25s;
 }
 
 #topBtn:hover {

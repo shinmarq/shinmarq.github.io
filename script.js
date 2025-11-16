@@ -63,12 +63,12 @@ function closeModal() {
 }
 
 // CLOSE IF CLICK OUTSIDE
-window.onclick = function(event) {
+window.addEventListener("click", function(event) {
     let modal = document.getElementById("projectModal");
     if (event.target === modal) {
         modal.style.display = "none";
     }
-};
+});
 
 // Dark Mode Toggle
 function toggleMode() {
@@ -76,15 +76,15 @@ function toggleMode() {
 }
 
 // Back to Top Button
-let topBtn = document.getElementById("topBtn");
+const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 300) {
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
         topBtn.style.display = "block";
     } else {
         topBtn.style.display = "none";
     }
-};
+});
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
