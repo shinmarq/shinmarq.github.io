@@ -1,3 +1,58 @@
+fetch("projects.json")
+    .then(response => response.json())
+    .then(projects => loadProjects(projects))
+    .catch(err => console.error("Error loading projects.json:", err));
+
+function loadProjects(projects) {
+    const grid = document.getElementById("projectsGrid");
+    grid.innerHTML = "";
+
+    projects.forEach(project => {
+        const card = document.createElement("div");
+        card.className = "project";
+        card.onclick = () => openProject(project.title, project.description, project.tech);
+
+        card.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.short}</p>
+            <div class="tech-badges">
+                ${project.tech.map(t => `<span>${t}</span>`).join("")}
+            </div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
+// OPEN PROJECT MODAL
+function openProject(title, description, techArray) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+
+    let techContainer = document.getElementById("modalTech");
+    techContainer.innerHTML = ""; 
+    techArray.forEach(t => {
+        let span = document.createElement("span");
+        span.innerText = t;
+        techContainer.appendChild(span);
+    });
+
+    document.getElementById("projectModal").style.display = "block";
+}
+
+// CLOSE MODAL
+function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+}
+
+// CLOSE IF CLICK OUTSIDE
+window.onclick = function(event) {
+    let modal = document.getElementById("projectModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
 // Dark Mode Toggle
 function toggleMode() {
     document.body.classList.toggle("light-mode");

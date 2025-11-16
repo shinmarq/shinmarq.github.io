@@ -76,95 +76,7 @@
         <!-- PROJECTS -->
         <div class="section">
             <h2>Projects</h2>
-
-            <div class="grid">
-
-                <!-- Project 6 -->
-                <div class="project">
-                    <h3>⚙️ VM → AKS Migration 2025 Fintech</h3>
-                    <p>Migrated legacy workloads to AKS using ArgoCD, Terraform, DR, and automated rollbacks.
-                    </p>
-
-                    <div class="tech-badges">
-                        <span>AKS</span><span>Terraform</span><span>ArgoCD</span>
-                        <span>Azure DevOps</span><span>Docker</span><span>Terragrunt</span>
-                        <span>Elasticsearch</span><span>Keycloak</span><span>Trivy</span>
-                        <span>Postgres</span><span>Azure Cosmos DB</span><span>Azure Key Vault</span>
-                        <span>Azure Blob Storage</span><span>Azure Service Bus</span><span>APISIX</span>
-                        <span>Redis</span>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project">
-                    <h3>🤖 BPI AIA Pamilya Protect Chatbot Infrastructure 2022 - 2024</h3>
-                    <p>Developed chatbot infrastructure for BPI AIA. @BPIAIAPamilyaProtect <a href="https://www.facebook.com/BPIAIAPamilyaProtect" target="_blank">View BPI AIA Pamilya Protect Chatbot →</a></p>
-
-                    <div class="tech-badges">
-                        <span>AWS</span><span>EKS</span><span>AWS Secrets Manager</span><span>Github Actions</span>
-                        <span>AWS RDS PostgreSQL</span><span>Keycloak</span><span>Docker</span><span>RabbitMQ</span><span>NGINX</span>
-                        <span>Elasticsearch</span><span>Redis</span>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project">
-                    <h3>🔄 CI/CD Modernization 2020–2024</h3>
-                    <p>Designed multi-language pipelines using GitHub Actions for Node.js, React, and C#.</p>
-
-                    <div class="tech-badges">
-                        <span>GitHub Actions</span><span>AWS</span><span>ECR</span>
-                        <span>Artifact Registry</span><span>Node.js</span><span>React</span><span>C#</span>
-                        <span>Github packages</span>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project">
-                    <h3>🛡 UBX Micro-Insurance Middleware API Platform 2021</h3>
-                    <p>Designed AWS EKS platform with CloudFront, Terraform, GitOps, and automation.</p>
-
-                    <div class="tech-badges">
-                        <span>AWS EKS</span><span>CloudFront</span><span>Terraform</span>
-                        <span>FluxCD</span><span>API blueprint</span>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project">
-                    <h3>🤖 Emma by AXA 2019–2020</h3>
-                    <p>Developed chatbot Backend/Frontend services for AXA. <a href="https://www.axa.com.ph/emma" target="_blank">View Emma →</a></p>
-
-                    <div class="tech-badges">
-                        <span>Azure</span><span>Bot Framework</span><span>Node.js</span><span>NLP</span>
-                        <span>Azure DevOps</span><span>Docker</span><span>Azure Cosmos DB</span>
-                    </div>
-                </div>
-
-                <!-- Project 1 -->
-                <div class="project">
-                    <h3>💬 Chatbot PH Architecture 2017–2018</h3>
-                    <p>Built scalable NodeJS microservices with MongoDB and NLP engines (Wit.ai, Dialogflow, LUIS).</p>
-
-                    <div class="tech-badges">
-                        <span>Node.js</span><span>MongoDB</span><span>Wit.ai</span>
-                        <span>Dialogflow</span><span>LUIS</span><span>Microservices</span>
-                        <span>Azure DevOps</span><span>Docker</span><span>Github Actions</span>
-                    </div>
-                </div>
-                
-                <!-- Project 0 -->
-                <div class="project">
-                    <h3>ERP and CRM Web Application Migration 2016 - 2017</h3>
-                    <p>Migrated existing ERP and CRM from legacy on-premise to web application using PHP CodeIgniter and MySQL.</p>
-
-                    <div class="tech-badges">
-                        <span>Javascript</span><span>PHP CodeIgniter</span><span>Visual Basic 6</span>
-                        <span>MySQL</span>
-                    </div>
-                </div>
-
-            </div>
+            <div class="grid" id="projectsGrid"></div>
         </div>
 
         <!-- CONTACT -->
@@ -183,6 +95,17 @@
 
     <!-- BACK TO TOP -->
     <div id="topBtn" onclick="scrollToTop()">↑ Top</div>
+
+    <!-- PROJECT MODAL -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+
+            <div id="modalTech" class="tech-badges"></div>
+        </div>
+    </div>
 
 </body>
 </html>

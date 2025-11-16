@@ -1,0 +1,44 @@
+[
+    {
+        "title": "⚙️ VM → AKS Migration 2025",
+        "short": "Migrated legacy workloads to AKS using ArgoCD, Terraform, DR, and automated rollbacks.",
+        "description": "Migrated legacy VM-based workloads to Azure Kubernetes Service (AKS) with ArgoCD GitOps, Terraform/Terragrunt IaC, APISIX ingress, high availability, full disaster recovery setup, automated rollback pipelines, secure identity integration with Keycloak and Managed Identity, centralized logging/monitoring, and complete modernization.",
+        "tech": ["AKS","Terraform","Terragrunt","ArgoCD","APISIX","Azure DevOps","Docker","Postgres","Cosmos DB","Azure Key Vault","Azure Blob Storage","Azure Service Bus","Redis","Keycloak","Trivy","Elasticsearch"]
+    },
+    {
+        "title": "🤖 BPI AIA Pamilya Protect Chatbot Infrastructure (2022–2024)",
+        "short": "Chatbot infrastructure for BPI AIA powered by AWS EKS.",
+        "description": "Designed and maintained the BPI AIA chatbot infrastructure running on AWS EKS. Implemented secure authentication, multi-channel messaging, high availability, autoscaling, centralized logs, and container security. Included Keycloak, Secrets Manager, Redis cache optimization, RabbitMQ messaging backbone, and CI/CD via GitHub Actions.",
+        "tech": ["AWS","EKS","AWS Secrets Manager","GitHub Actions","RabbitMQ","Docker","NGINX","Keycloak","AWS RDS PostgreSQL","Elasticsearch","Redis"]
+    },
+    {
+        "title": "🔄 CI/CD Modernization (2020–2024)",
+        "short": "Built standardized CI/CD pipelines for Node.js, React, C#, and containers.",
+        "description": "Implemented cloud-native CI/CD modernization for 10+ applications. Created reusable GitHub Actions pipeline templates supporting Node.js, React, .NET, and container workloads. Added automated scanning, test orchestration, artifact versioning, ECR publishing, environment promotion, and release governance.",
+        "tech": ["GitHub Actions","AWS","ECR","Artifact Registry","Node.js","React","C#","GitHub Packages"]
+    },
+    {
+        "title": "🛡 UBX Micro-Insurance Middleware API Platform (2021)",
+        "short": "Built AWS EKS micro-insurance gateway platform.",
+        "description": "Developed a secure and scalable micro-insurance platform using AWS EKS, CloudFront, Terraform IaC, and FluxCD GitOps. Automated deployments, implemented API Blueprint documentation generation, and optimized service-to-service communication and cloud architecture.",
+        "tech": ["AWS EKS","CloudFront","Terraform","FluxCD","API Blueprint"]
+    },
+    {
+        "title": "🤖 Emma by AXA (2019–2020)",
+        "short": "Chatbot backend/frontend + NLP for AXA Philippines.",
+        "description": "Developed the backend and frontend architecture supporting AXA’s Emma chatbot platform, including NLP integration, Cosmos DB storage, Azure pipelines, identity management, and multi-channel compatibility. Modernized cloud workloads to Azure Kubernetes and serverless endpoints.",
+        "tech": ["Azure","Bot Framework","Node.js","NLP","Azure DevOps","Docker","Cosmos DB"]
+    },
+    {
+        "title": "💬 Chatbot PH Architecture (2017–2018)",
+        "short": "Enterprise chatbot microservices using Node.js + NLP.",
+        "description": "Built scalable NodeJS microservices for enterprise-grade chatbot deployments using Wit.ai, Dialogflow, and LUIS. Implemented MongoDB persistence, custom NLP pipelines, channel adapters, automation tooling, logging, and CI/CD workflows.",
+        "tech": ["Node.js","MongoDB","Wit.ai","Dialogflow","LUIS","Microservices","Azure DevOps","Docker","GitHub Actions"]
+    },
+    {
+        "title": "ERP & CRM Web Application Migration (2016–2017)",
+        "short": "Migration of legacy ERP/CRM to modern web stack.",
+        "description": "Migrated on-premise ERP and CRM systems into modern web applications using PHP CodeIgniter, JavaScript, and MySQL. Improved maintainability, stability, and system performance. Rebuilt key modules and automated legacy Visual Basic 6 components.",
+        "tech": ["JavaScript","PHP CodeIgniter","Visual Basic 6","MySQL"]
+    }
+]
