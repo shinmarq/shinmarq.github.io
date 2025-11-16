@@ -1,4 +1,4 @@
-fetch("./projects.json")
+fetch("./assets/projects.json")
     .then(response => response.json())
     .then(projects => loadProjects(projects))
     .catch(err => console.error("Error loading projects.json:", err));
