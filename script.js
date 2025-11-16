@@ -10,7 +10,15 @@ function loadProjects(projects) {
     projects.forEach(project => {
         const card = document.createElement("div");
         card.className = "project";
-        card.onclick = () => openProject(project.title, project.description, project.tech);
+        card.onclick = () =>
+            openProject(
+                project.title,
+                project.description,
+                project.tech,
+                project.link,
+                project.linkText
+            );
+        
 
         card.innerHTML = `
             <h3>${project.title}</h3>
