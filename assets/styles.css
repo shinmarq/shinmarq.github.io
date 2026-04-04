@@ -347,3 +347,47 @@ footer {
     color: #666;
     font-size: 14px;
 }
+
+/* =========================================
+   HERO ACTIONS
+========================================= */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text);
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.secondary-button:hover {
+    background: var(--card);
+    text-decoration: none;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.profile p {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.section p {
+    max-width: 860px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
