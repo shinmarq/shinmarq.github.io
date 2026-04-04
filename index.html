@@ -4,38 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shin Quipit | DevOps Engineer</title>
-
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/devops-sq.svg" />
-
-    <!-- External CSS -->
     <link rel="stylesheet" href="./assets/styles.css" />
 </head>
-
 <body>
 
-    <!-- HEADER -->
     <header>
         <h1>Shin Quipit</h1>
-        <p>DevOps Engineer • Cloud • Kubernetes • Automation • Leadership</p>
-        <!-- <div class="badge">OPEN TO NEW OPPORTUNITIES</div> -->
-        <button class="toggle-btn" onclick="toggleMode()">Light/Dark</button>
+        <p>DevOps Engineer • Cloud • Kubernetes • Automation • Reliability</p>
+        <button class="toggle-btn" onclick="toggleMode()" aria-label="Toggle light and dark mode">Light/Dark</button>
     </header>
 
     <div class="container fade">
 
-        <!-- PROFILE -->
         <div class="profile">
             <p>
-                DevSecOps Engineer with extensive experience across Azure, AWS,
-                Kubernetes, automation, and secure infrastructure design.
-                Passionate about cloud-native architectures, GitOps, and scalable systems.
+                DevOps Engineer specializing in Azure, Kubernetes, CI/CD, automation, and cloud reliability.
+                I build scalable platforms, streamline delivery pipelines, and improve operational resilience.
             </p>
 
-            <a class="cv-button" href="./assets/shinmarq_devops.pdf" download>Download CV</a>
+            <div class="hero-actions">
+                <a class="cv-button" href="./assets/shinmarq_devops.pdf" download>Download CV</a>
+                <a class="secondary-button" href="https://www.linkedin.com/in/shinmarq/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="secondary-button" href="https://github.com/shinmarq" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="secondary-button" href="mailto:shin.quipit@gmail.com">Email</a>
+            </div>
         </div>
 
-        <!-- SKILLS -->
+        <div class="section">
+            <h2>About</h2>
+            <p>
+                I work across cloud infrastructure, Kubernetes operations, GitOps, CI/CD pipelines,
+                observability, and production support. My focus is on building reliable systems,
+                reducing manual work through automation, and enabling fast, secure deployments.
+            </p>
+        </div>
+
         <div class="section">
             <h2>Skills</h2>
             <div class="skills-list">
@@ -55,7 +59,6 @@
             </div>
         </div>
 
-        <!-- OPERATIONS & RELIABILITY -->
         <div class="section">
             <h2>Operations & Reliability</h2>
             <div class="ops-list">
@@ -73,45 +76,43 @@
             </div>
         </div>
 
-        <!-- PROJECTS -->
         <div class="section">
             <h2>Projects</h2>
             <div class="grid" id="projectsGrid"></div>
         </div>
 
-        <!-- CONTACT -->
+        <div class="section">
+            <h2>Experience Highlights</h2>
+            <p>
+                Experience across Azure, AWS, Kubernetes, Terraform, CI/CD, GitOps, observability,
+                secure cloud design, and production support for modern infrastructure platforms.
+            </p>
+        </div>
+
         <div class="section">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:shin.quipit@gmail.com">shin.quipit@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/shinmarq/">linkedin.com/in/shinmarq</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/shinmarq/" target="_blank" rel="noopener noreferrer">linkedin.com/in/shinmarq</a></p>
+            <p>GitHub: <a href="https://github.com/shinmarq" target="_blank" rel="noopener noreferrer">github.com/shinmarq</a></p>
         </div>
 
     </div>
 
     <footer>© 2025 Shin Quipit — DevOps Engineer</footer>
 
-    <!-- BACK TO TOP -->
     <div id="topBtn" onclick="scrollToTop()">↑ Top</div>
 
-    <!-- PROJECT MODAL -->
     <div id="projectModal" class="modal">
         <div class="modal-content">
-
             <span class="close" onclick="closeModal()">&times;</span>
-
             <h2 id="modalTitle"></h2>
-
             <p id="modalDescription"></p>
-
             <h3>Tech Used:</h3>
             <div id="modalTech" class="tech-badges"></div>
-
             <div id="modalLink" style="margin-top:20px; display:none;"></div>
-
         </div>
     </div>
 
-    <!-- JS -->
     <script src="./scripts/script.js"></script>
 </body>
 </html>
